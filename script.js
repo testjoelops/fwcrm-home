@@ -1,4 +1,13 @@
-document.getElementById('submission-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent default form submission
-    document.getElementById('form-container').innerHTML = '<div class="thank-you">Thank you for the submission!</div>';
+document.getElementById('lead-form').addEventListener('submit', function(event) {
+    // Prevent the form from refreshing the page on submit
+    event.preventDefault();
+    
+    // Hide the form
+    document.getElementById('lead-form').classList.add('hidden');
+    
+    // Show the thank you message
+    document.getElementById('thank-you-message').classList.remove('hidden');
+    
+    // Optionally: If you need to send the form data manually via AJAX, you can do it here.
+    // For now, the form submission is blocked, and the thank-you message is shown.
 });
