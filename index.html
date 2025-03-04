@@ -15,16 +15,36 @@ chat='true'>
     <div class="container">
         <h1>TestJoelOps</h1>
         <div id="form-container">
-           <form >
+          <form id="lead-form">
                 <input type="text" id="name" name="first_name" placeholder="First Name" required>
                 <input type="text" id="org-name" name="last_name" placeholder="Last Name">
                 <input type="email" id="email" name="email" placeholder="Email" required>
                 <input type="text" id="country" name="country" placeholder="Country">
+                <input type="text" id="company" name="company" placeholder="Company"> 
                 <button type="submit">Submit</button>
+
+            <input type="submit" onclick="identify_call()">
+            
             </form>
+
           <script>
-document.querySelector("#form-container > form").id = "CRM_form";
+    function identify_call() {
+        var new_contact = {
+            "First name": document.getElementById("name").value,
+            "Last name": document.getElementById("org-name").value,
+            "Email": document.getElementById("email").value,
+            "Country": document.getElementById("country").value,
+            "User Agent":"CRM_form",
+            "company": {
+                "Name": document.getElementById("company").value
+            }
+        };
+        var identifier = document.getElementById("email").value; // Using email as identifier
+        fwcrm.identify(identifier, new_contact);
+        // You might need to handle the submission of the form here, e.g., redirecting to another page or displaying a success message
+    }
 </script>
+         
             <div id="thank-you-message" class="hidden">Thank you for the submission!</div>
         </div>
     </div>
