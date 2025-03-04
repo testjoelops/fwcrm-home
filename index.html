@@ -15,11 +15,10 @@ chat='true'>
     <div class="container">
         <h1>TestJoelOps</h1>
         <div id="form-container">
-          <form id="lead-form">
+          <form id="lead_form_2">
                 <input type="text" id="name" name="first_name" placeholder="First Name" required>
                 <input type="text" id="org-name" name="last_name" placeholder="Last Name">
                 <input type="email" id="email" name="email" placeholder="Email" required>
-                <input type="text" id="country" name="country" placeholder="Country">
                 <input type="text" id="company" name="company" placeholder="Company"> 
                 <button type="submit">Submit</button>
 
@@ -33,7 +32,6 @@ chat='true'>
             "First name": document.getElementById("name").value,
             "Last name": document.getElementById("org-name").value,
             "Email": document.getElementById("email").value,
-            "Country": document.getElementById("country").value,
             "User Agent":"CRM_form",
             "company": {
                 "Name": document.getElementById("company").value
