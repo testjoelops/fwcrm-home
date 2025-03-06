@@ -25,23 +25,6 @@ chat='true'>
             <input type="submit" onclick="identify_call()">
             
             </form>
-
-          <script>
-    function identify_call() {
-        var new_contact = {
-            "First name": document.getElementById("name").value,
-            "Last name": document.getElementById("org-name").value,
-            "Email": document.getElementById("email").value,
-            "User Agent":"CRM_form",
-            "company": {
-                "Name": document.getElementById("company").value
-            }
-        };
-        var identifier = document.getElementById("email").value; // Using email as identifier
-        fwcrm.identify(identifier, new_contact);
-        // You might need to handle the submission of the form here, e.g., redirecting to another page or displaying a success message
-    }
-</script>
          
             <div id="thank-you-message" class="hidden">Thank you for the submission!</div>
         </div>
