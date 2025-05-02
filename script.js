@@ -3,7 +3,7 @@ document.getElementById('crm_lead-form').addEventListener('submit', function(eve
     event.preventDefault();
     
     // Hide the form
-    document.getElementById('lcrm_lead-form').classList.add('hidden');
+    document.getElementById('crm_lead-form').classList.add('hidden');
     
     // Show the thank you message
     document.getElementById('thank-you-message').classList.remove('hidden');
