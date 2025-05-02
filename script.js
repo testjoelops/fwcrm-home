@@ -1,4 +1,4 @@
-document.getElementById('lead-form').addEventListener('submit', function(event) {
+document.getElementById('crm_lead-form').addEventListener('submit', function(event) {
     // Prevent the form from refreshing the page on submit
     event.preventDefault();
     
